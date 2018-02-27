@@ -17,13 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 from . import view
 from learn import views as learn_views
-from calc import views as calc_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^hello/', view.hello),
+    url(r'^$', view.hello),
     url(r'^learn/', learn_views.index),
     url(r'^home/', learn_views.home),
-    url(r'^calc/(\d+)/(\d+)/$', calc_views.add),
+    url(r'^save/', learn_views.save),
 ]
 
