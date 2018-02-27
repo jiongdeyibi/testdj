@@ -5,11 +5,15 @@ from .models import BlogArticle
 
 
 def index(request):
-    return HttpResponse(u"新APP视图d")
+    return render(request, 'index.html')
 
 
 def home(request):
     return render(request, 'home.html')
+
+
+def head(request):
+    return render(request, 'head.html')
 
 
 def save(request):
